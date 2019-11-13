@@ -1,6 +1,6 @@
 package com.crud.tasks.domain;
 
-import com.sun.javafx.beans.IDProperty;
+
 import lombok.Getter;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -22,7 +22,7 @@ public class Task {
     private Long id;
     @Column(name= "name")
     private String title;
-    @Column (name= "description")
+    @Column(name= "description")
     private String content;
 
 }

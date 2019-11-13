@@ -7,9 +7,6 @@ import com.crud.tasks.domain.TaskDto;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Dawid Nogacz on 12.07.2019
- */
 @Component
 public class TaskMapper {
     public Task mapToTask(final TaskDto taskDto) {
