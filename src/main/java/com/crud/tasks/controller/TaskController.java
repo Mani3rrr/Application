@@ -15,9 +15,7 @@ import java.util.List;
 @RequestMapping("/v1/task")
 public class TaskController {
 
-    @Autowired
     private DbService service;
-    @Autowired
     private TaskMapper taskMapper;
 
 
