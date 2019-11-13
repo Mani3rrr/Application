@@ -12,18 +12,21 @@ import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
+
 @RestController
 @RequestMapping("/v1/task")
 public class TaskController {
 
+    @Autowired
     private DbService service;
+    @Autowired
     private TaskMapper taskMapper;
 
 
 
     @RequestMapping(method = RequestMethod.GET, value = "getTasks")
     public List<TaskDto> getTasks(){
-        return new ArrayList<>();
+        return taskMapper.mapToTaskDtoList(service.getAllTasks());
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "getTask")
