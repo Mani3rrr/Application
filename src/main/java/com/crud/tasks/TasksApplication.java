@@ -15,13 +15,15 @@ public class TasksApplication{
 		SpringApplication.run(TasksApplication.class, args);
 
 
-//	TaskDto taskDto = new TaskDto((long) 1, "Test title", "I want to be a coder");
-//
-//	Long id = taskDto.getId();
-//	String title = taskDto.getTitle();
-//	String content = taskDto.getContent();
-//
-//	System.out.println(id +" "+title +" "+content);
+
+
+	TaskDto taskDto = new TaskDto((long) 1, "Test title", "I want to be a coder");
+
+	Long id = taskDto.getId();
+	String title = taskDto.getTitle();
+	String content = taskDto.getContent();
+
+	System.out.println(id +" "+title +" "+content);
 }
 
 //	@Override
