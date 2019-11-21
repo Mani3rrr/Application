@@ -21,10 +21,12 @@ dependencies {
 	compileOnly('org.projectlombok:lombok')
 //	compile('mysql:mysql-connector-java')
 	compile('org.postgresql:postgresql')
+//	compile('spring-boot-starter-data-jdbc')
 	annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
 //	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+
 }
 
