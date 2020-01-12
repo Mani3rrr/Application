@@ -26,7 +26,7 @@ public class TrelloController {
     public List<TrelloBoardDto> getTrelloBoards() {
 
         return trelloClient.getTrelloBoards();
-//        // GET request
+        // GET request
 //        List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
 //
 //        trelloBoards.forEach(trelloBoardDto -> {
