@@ -95,7 +95,7 @@ public class TrelloMapperTest {
         TrelloCardDto trelloCardDto = trelloMapper.mapToCardDto(trelloCard);
 
         //Then
-        assertEquals("desc", trelloCardDto.getDescription());
+        assertEquals("up", trelloCardDto.getDescription());
     }
 
 }

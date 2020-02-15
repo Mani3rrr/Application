@@ -1,11 +1,9 @@
 package com.crud.tasks.facade;
 
-import com.crud.tasks.domain.TrelloBoard;
-import com.crud.tasks.domain.TrelloBoardDto;
-import com.crud.tasks.domain.TrelloList;
-import com.crud.tasks.domain.TrelloListDto;
+import com.crud.tasks.domain.*;
 import com.crud.tasks.mapper.TrelloMapper;
 import com.crud.tasks.service.TrelloService;
+import com.crud.tasks.trello.client.TrelloClient;
 import com.crud.tasks.trello.config.TrelloConfig;
 import com.crud.tasks.trello.facade.TrelloFacade;
 import com.crud.tasks.trello.validator.TrelloValidator;
@@ -38,6 +36,10 @@ public class TrelloFacadeTest {
     private TrelloService trelloService;
     @Mock
     private TrelloMapper trelloMapper;
+    @Mock
+    private TrelloClient trelloClient;
+    @Mock
+    private TrelloCardDto trelloCardDto;
 
     @Test
     public void shouldFetchEmptyList(){
@@ -109,21 +111,6 @@ public class TrelloFacadeTest {
         });
     }
 
-    @Test
-    public void  shouldReturnEmptyListWithFacade()throws URISyntaxException {
-        //Given
-        TrelloBoardDto[] trelloBoards = null;
-
-        URI uri = new URI("http://abc.com");
-
-        when(restTemplate.getForObject(uri, TrelloBoardDto[].class)).thenReturn(trelloBoards);
-
-        //When
-        List<TrelloBoardDto> fetchedTrelloBoards = trelloFacade.fetchTrelloBoards();
-
-        //Then
-        assertEquals(0, fetchedTrelloBoards.size());
-    }
 
 
 }
