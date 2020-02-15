@@ -14,7 +14,7 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.web.client.RestTemplate;
 
-import java.net.URI;
+
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,13 +36,10 @@ public class TrelloFacadeTest {
     private TrelloService trelloService;
     @Mock
     private TrelloMapper trelloMapper;
-    @Mock
-    private TrelloClient trelloClient;
-    @Mock
-    private TrelloCardDto trelloCardDto;
+
 
     @Test
-    public void shouldFetchEmptyList(){
+    public void shouldFetchEmptyList() {
         //Given
         List<TrelloListDto> trelloLists = new ArrayList<>();
         trelloLists.add(new TrelloListDto("1", "test_list", false));
@@ -71,7 +68,7 @@ public class TrelloFacadeTest {
 
 
     @Test
-    public void shouldFetchTrelloBoards(){
+    public void shouldFetchTrelloBoards() {
         //Given
         List<TrelloListDto> trelloLists = new ArrayList<>();
         trelloLists.add(new TrelloListDto("1", "my_list", false));
@@ -110,7 +107,5 @@ public class TrelloFacadeTest {
 
         });
     }
-
-
 
 }
