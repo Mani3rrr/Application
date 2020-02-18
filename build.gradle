@@ -26,10 +26,14 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok:1.18.10'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
-//	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+	compile('org.springframework.boot:spring-boot-starter-actuator')
 
+//	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+	// Swagger
 	compile('io.springfox:springfox-swagger2:2.7.0') 
 	compile('io.springfox:springfox-swagger-ui:2.7.0')
+	//gson
+	compile('com.google.code.gson:gson:2.8.2')
 
 }
 
